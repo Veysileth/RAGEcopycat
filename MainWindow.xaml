@@ -1,0 +1,110 @@
+﻿<Window x:Class="RAGEcopycat.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:RAGEcopycat"
+        mc:Ignorable="d"
+        Title="CopyPaste Tool for RAGE:MP Server Files" Height="320" Width="670" Background="LightGray" ResizeMode="NoResize">
+
+
+    <Grid Name="GridMain" Background="Black">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="20" />
+        </Grid.ColumnDefinitions>
+
+        <Grid Name="Grid1" Grid.Column="0" Grid.ColumnSpan="1" Margin="0,0,0,10">
+            <StackPanel Margin="10,10,10,50">
+                <TextBlock FontSize="18">Copy From</TextBlock>
+            </StackPanel>
+            <StackPanel Margin="10,39,10,0" VerticalAlignment="Top" Height="279">
+                <TextBlock>PATH .csproj for dotnet publish</TextBlock>
+                <TextBox Name="txtName1" TextChanged="TxtName1_TextChanged">
+                </TextBox>
+                <TextBlock FontSize="3"></TextBlock>
+                <TextBlock>PATH Serverside</TextBlock>
+                <TextBox Name="txtName2" TextChanged="TxtName2_TextChanged"/>
+                <TextBlock FontSize="3"></TextBlock>
+                <TextBlock>PATH Clientside</TextBlock>
+                <TextBox Name="txtName3" TextChanged="TxtName3_TextChanged"/>
+                <TextBlock FontSize="3"></TextBlock>
+                <TextBlock>PATH CEF</TextBlock>
+                <TextBox Name="txtName4" TextChanged="TxtName4_TextChanged"/>
+                <TextBlock FontSize="3"></TextBlock>
+                <TextBlock>PATH SERVER.EXE</TextBlock>
+                <TextBox Name="txtName5" TextChanged="TxtName5_TextChanged"/>
+            </StackPanel>
+        </Grid>
+
+        <Grid Name="Grid2" Grid.Column="1" Grid.ColumnSpan="1" Margin="0,0,0,10">
+            <StackPanel Margin="10,10,10,50">
+                <TextBlock FontSize="18">Paste To</TextBlock>
+            </StackPanel>
+            <StackPanel Margin="10,78,10,-6" VerticalAlignment="Top" Height="239">
+                <TextBlock></TextBlock>
+                <TextBox Name="txtName6" TextChanged="TxtName6_TextChanged"/>
+                <TextBlock FontSize="3"></TextBlock>
+                <TextBlock></TextBlock>
+                <TextBox Name="txtName7" TextChanged="TxtName7_TextChanged"/>
+                <TextBlock FontSize="3"></TextBlock>
+                <TextBlock></TextBlock>
+                <TextBox Name="txtName8" TextChanged="TxtName8_TextChanged"/>
+                <TextBlock FontSize="3"></TextBlock>
+            </StackPanel>
+        </Grid>
+        <Grid Name="Grid3" Grid.Column="2" Grid.ColumnSpan="1" Margin="0,0,0,10">
+            <StackPanel Margin="10,39,10,0" VerticalAlignment="Top" Height="242">
+                <TextBlock></TextBlock>
+                <Button Name="btnPublish" Margin="0,0,0,0" VerticalContentAlignment="Center" Click="BtnPublish_Click">
+                    <TextBlock Foreground="Black">PUBLISH</TextBlock>
+                </Button>
+                <TextBlock FontSize="3"></TextBlock>
+                <TextBlock></TextBlock>
+                <Button Name="btnServerside" Margin="0,0,0,0" VerticalContentAlignment="Center" Click="BtnServerside_Click">
+                    <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="Black">SERVERSIDE</TextBlock>
+                </Button>
+                <TextBlock FontSize="3"></TextBlock>
+                <TextBlock></TextBlock>
+                <Button Name="btnClientside"  Margin="0,0,0,0" VerticalContentAlignment="Center" Click="BtnClientside_Click">
+                    <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="Black">CLIENTSIDE</TextBlock>
+                </Button>
+                <TextBlock FontSize="3"></TextBlock>
+                <TextBlock></TextBlock>
+                <Button Name="btnCEF"  Margin="0,0,0,0" VerticalContentAlignment="Center" Click="BtnCEF_Click">
+                    <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="Black">CEF</TextBlock>
+                </Button>
+                <TextBlock FontSize="3"></TextBlock>
+                <TextBlock></TextBlock>
+                <Button Name="btnServer"  Margin="0,0,0,0" VerticalContentAlignment="Center" Click="BtnServer_Click">
+                    <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="Black">SERVER.EXE</TextBlock>
+                </Button>
+                <TextBlock FontSize="6"></TextBlock>
+                <Button Name="btnRun" Margin="0,10,0,0" VerticalContentAlignment="Center" Click="BtnRun_Click">
+                    <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="Black">RUN</TextBlock>
+                </Button>
+            </StackPanel>
+
+        </Grid>
+        <Grid Name="Grid4" Grid.Column="3" Grid.ColumnSpan="1" Margin="0,39,0,10" HorizontalAlignment="Left" VerticalAlignment="Top">
+            <StackPanel>
+                <TextBlock></TextBlock>
+                <CheckBox Name="chkbPublish" Height="18" Checked="ChkbPublish_Checked" Unchecked="ChkbPublish_Unchecked"></CheckBox>
+                <TextBlock FontSize="4"></TextBlock>
+                <TextBlock></TextBlock>
+                <CheckBox Name="chkbServerside" Height="18" Checked="ChkbServerside_Checked" Unchecked="ChkbServerside_Unchecked"></CheckBox>
+                <TextBlock FontSize="3"></TextBlock>
+                <TextBlock></TextBlock>
+                <CheckBox Name="chkbClientside" Height="18" Checked="ChkbClientside_Checked" Unchecked="ChkbClientside_Unchecked"></CheckBox>
+                <TextBlock FontSize="3"></TextBlock>
+                <TextBlock></TextBlock>
+                <CheckBox Name="chkbCef" Height="18" Checked="ChkbCef_Checked" Unchecked="ChkbCef_Unchecked"></CheckBox>
+                <TextBlock FontSize="3"></TextBlock>
+                <TextBlock></TextBlock>
+                <CheckBox Name="chkbServer" Height="18" Checked="ChkbServer_Checked" Unchecked="ChkbServer_Unchecked"></CheckBox>
+            </StackPanel>
+        </Grid>
+    </Grid>
+</Window>
